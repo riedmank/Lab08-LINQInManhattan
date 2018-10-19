@@ -1,16 +1,19 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using Lab08_LINQInManhattan.Classes;
 
 namespace Lab08_LINQInManhattan
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             
         }
 
-        static void JSONConversion()
+        public static void JSONConversion()
         {
             string path = "../../../data.json";
             string text = "";
@@ -20,7 +23,9 @@ namespace Lab08_LINQInManhattan
                 text = sr.ReadToEnd();
             }
 
-            
+            List<NeighborhoodData> myStuff = JsonConvert.DeserializeObject<List<NeighborhoodData>>(text);
+
+
         }
     }
 }
