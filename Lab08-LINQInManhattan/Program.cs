@@ -14,6 +14,9 @@ namespace Lab08_LINQInManhattan
             JSONConversion();
         }
 
+        /// <summary>
+        /// Converts JSON to C# and prints information to the console
+        /// </summary>
         public static void JSONConversion()
         {
             string path = "../../../data.json";
@@ -83,10 +86,6 @@ namespace Lab08_LINQInManhattan
             {
                 Console.WriteLine(hood);
             }
-
-            //from hood in hoods,
-            //select hood;
-
         }
     }
 }
